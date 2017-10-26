@@ -3,7 +3,7 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-  - npm install
+  - echo "Do nothing"
   artifacts:
     paths:
     - public
