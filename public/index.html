@@ -2,14 +2,54 @@
 <html class="cspio">
 
 <head>
+    <!-- Google optimize code to stop flickering -->
+    <style>
+        .async-hide {
+            opacity: 0 !important
+        }
+    </style>
+    <script>
+        (function (a, s, y, n, c, h, i, d, e) {
+            s.className += ' ' + y;
+            h.start = 1 * new Date;
+            h.end = i = function () {
+                s.className = s.className.replace(RegExp(' ?' + y), '')
+            };
+            (a[n] = a[n] || []).hide = h;
+            setTimeout(function () {
+                i();
+                h.end = null
+            }, c);
+            h.timeout = c;
+        })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+            'GTM-NLG6TGS': true
+        });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-90558506-1', 'auto');
+        ga('require', 'GTM-NLG6TGS');
+        ga('send', 'pageview');
+    </script>
+
     <!-- Share this info -->
-    <meta property="fb:app_id"      content="133632107358489" />
-    <meta property="og:title"       content="Vegan Eats Coming Soon!" />
-    <meta property="og:url"         content="http://veganeats.recipes/" />
-    <!-- <meta property="og:image"       content="http://i.imgur.com/yqHHlxA.jpg" /> -->
-    <meta property="og:image"       content="http://i.imgur.com/RRVDErw.jpg" />
-    <meta property="og:description" content="Vegan food is on its way! Subscribe for our launch date."/>
-    <meta property="og:site_name"   content="VeganEats" />
+    <meta property="fb:app_id" content="133632107358489" />
+    <meta property="og:title" content="Vegan Eats Coming Soon!" />
+    <meta property="og:url" content="http://veganeats.recipes/" />
+    <meta property="og:image" content="http://i.imgur.com/RRVDErw.jpg" />
+    <meta property="og:description" content="Vegan food is on its way! Subscribe for our launch date." />
+    <meta property="og:site_name" content="VeganEats" />
 
     <!---
 	Welcome to our free coming soon page template by http://comingsoonpage.com Get your free download at https://www.seedprod.com/free-coming-soon-page/
@@ -40,7 +80,7 @@
                 <a href="https://www.facebook.com/VeganEatsRecipes/" target="_blank">
                     <i class="fa fa-facebook-official fa-2x"></i>
                 </a>
-                <a href="" target="_blank">
+                <a href="https://twitter.com/VeganEats_" target="_blank">
                     <i class="fa fa-twitter fa-2x"></i>
                 </a>
                 <a href="mailto:support@devboxx.io" target="_blank">
