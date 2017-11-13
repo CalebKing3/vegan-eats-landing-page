@@ -1,0 +1,44 @@
+{
+  "title": "VeganEats",
+  "name": "VeganEats",
+  "version": "4.0.0-beta.2",
+  "description": "Subscription page for Vegan Eats app",
+  "keywords": [
+    "css",
+    "sass",
+    "html",
+    "responsive",
+    "theme",
+    "template"
+  ],
+  "homepage": "https://veganeats.recipes",
+  "bugs": {
+    "url": "https://github.com/BlackrockDigital/startbootstrap-agency/issues",
+    "email": "support@devboxx.io"
+  },
+  "license": "MIT",
+  "author": "Caleb King",
+  "contributors": [
+    "Jordan White"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/CalebKing3/VeganEatsLandingPage"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "font-awesome": "4.7.0",
+    "jquery": "^3.2.1",
+    "jquery.easing": "^1.4.1"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "3.9.0",
+    "gulp-header": "1.8.9",
+    "gulp-less": "^3.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "3.0.0"
+  }
+}
