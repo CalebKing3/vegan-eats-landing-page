@@ -1,20 +1,16 @@
-image: node:latest
+image: node:4.2.2
 
-cache:
-  paths:
-   - node_modules/
+pages:
+  cache:
+    paths:
+    - node_modules/
 
-before_script:
+  script:
   - npm install -g gulp
   - npm install
-
-stages:
-  - build_deploy
-
-build_&_deploy_app:
-  stage: build_deploy
+  - gulp
+  artifacts:
+    paths:
+    - vendor
   only:
-   - master
-  script:
-   - gulp build -production
-   - gulp deploy
+  - master
