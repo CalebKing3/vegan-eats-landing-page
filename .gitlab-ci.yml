@@ -9,5 +9,9 @@ pages:
   artifacts:
     paths:
     - public
+  environment:
+    name: production/pages
+    url: http://veganeats.recipes/
+
   only:
   - master
