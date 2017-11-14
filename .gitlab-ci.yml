@@ -6,8 +6,10 @@ pages:
    - npm install -g gulp
    - npm install
    - gulp
+   - mkdir newPublicFolder
+   - mv public/* newPublicFolder
   artifacts:
     paths:
-    - vendor
+    - newPublicFolder
   only:
   - master
