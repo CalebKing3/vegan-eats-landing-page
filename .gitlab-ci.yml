@@ -1,14 +1,11 @@
-image: node:4.2.2
+image: alpine:latest
 
 pages:
-  cache:
-    paths:
-    - node_modules/
-
+  stage: deploy
   script:
-  - npm install -g gulp
-  - npm install
-  - gulp
+   - npm install -g gulp
+   - npm install
+   - gulp
   artifacts:
     paths:
     - vendor
