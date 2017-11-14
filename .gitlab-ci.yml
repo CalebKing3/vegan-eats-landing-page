@@ -6,7 +6,6 @@ pages:
    - npm install -g gulp
    - npm install
    - gulp
-   - mv public/* public
   artifacts:
     paths:
     - public
