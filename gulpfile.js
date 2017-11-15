@@ -59,6 +59,18 @@ gulp.task('copy', function() {
     gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
         .pipe(gulp.dest('public/vendor/jquery'))
 
+    gulp.src(['mail/**'])
+        .pipe(gulp.dest('public/mail'))
+
+    gulp.src(['index.html'])
+        .pipe(gulp.dest('public/'))
+
+    gulp.src(['js/**'])
+        .pipe(gulp.dest('public/js'))
+
+    gulp.src(['img/**'])
+        .pipe(gulp.dest('public/img'))
+
     gulp.src([
             'node_modules/font-awesome/**',
             '!node_modules/font-awesome/**/*.map',
