@@ -1,3 +1,6 @@
-node_modules/
 vendor/
 css/
+node_modules/
+public/
+css/agency.css
+css/agency.min.css
