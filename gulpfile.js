@@ -91,6 +91,45 @@ gulp.task('copy', function() {
 // Default task
 gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy']);
 
+//Deploy code to a public folder to work on gitlab pages
+gulp.task('deploy', ['sass', 'minify-css', 'minify-js', 'copy'], function() {
+  gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
+      .pipe(gulp.dest('public/vendor/bootstrap'))
+
+  gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
+      .pipe(gulp.dest('public/vendor/jquery'))
+
+  gulp.src(['node_modules/jquery.easing/jquery.easing.compatibility.js',
+            'node_modules/jquery.easing/jquery.easing.js',
+            'node_modules/jquery.easing/jquery.easing.min.js'])
+     .pipe(gulp.dest('public/vendor/jquery-easing'))
+
+  gulp.src(['css/**'])
+      .pipe(gulp.dest('public/css'))
+
+  gulp.src(['img/**'])
+      .pipe(gulp.dest('public/img'))
+
+  gulp.src(['js/**'])
+      .pipe(gulp.dest('public/js'))
+
+  gulp.src(['mail/**'])
+      .pipe(gulp.dest('public/mail'))
+
+  gulp.src(['index.html'])
+      .pipe(gulp.dest('public/'))
+
+  gulp.src([
+          'node_modules/font-awesome/**',
+          '!node_modules/font-awesome/**/*.map',
+          '!node_modules/font-awesome/.npmignore',
+          '!node_modules/font-awesome/*.txt',
+          '!node_modules/font-awesome/*.md',
+          '!node_modules/font-awesome/*.json'
+      ])
+      .pipe(gulp.dest('public/vendor/font-awesome'))
+})
+
 // Configure the browserSync task
 gulp.task('browserSync', function() {
   browserSync.init({

@@ -5,7 +5,7 @@ pages:
   script:
    - npm install -g gulp
    - npm install
-   - gulp
+   - gulp deploy
   artifacts:
     paths:
     - public
